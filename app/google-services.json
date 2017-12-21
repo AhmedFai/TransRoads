@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "833826082532",
+    "firebase_url": "https://transroads-ea1c7.firebaseio.com",
+    "project_id": "transroads-ea1c7",
+    "storage_bucket": "transroads-ea1c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833826082532:android:d89c59dacd8fabf7",
+        "android_client_info": {
+          "package_name": "com.example.user.transroads"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833826082532-b4rt9m035tkv2ac5be9i7b0dis2655au.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.transroads",
+            "certificate_hash": "581ddd5065eb4197e93a94dcb5265bbc25ddfff6"
+          }
+        },
+        {
+          "client_id": "833826082532-0jop494vahmrsagb5sou6lif47divo2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnr9fFnhguNEMb0SMKQicuxtEN5KS_MAo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "833826082532-0jop494vahmrsagb5sou6lif47divo2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

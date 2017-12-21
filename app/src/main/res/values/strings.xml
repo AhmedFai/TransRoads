@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Transroads</string>
+
+    <string name="facebook_app_id">405383889835931</string>
+    <string name="fb_login_protocol_scheme">fb405383889835931</string>
+
+    <string name="google_maps_api_key">AIzaSyAOZQksCTOJKAb8BC-16hWpIYuZQKqDriA</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_home">Home Fragment</string>
+    <string name="text_map">Map Fragment</string>
+    <string name="text_profile">Profile Fragment</string>
+    <string name="text_title_below">Share your photos, videos, trips and live Streaming</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_map">Map</string>
+    <string name="menu_profile">Profile</string>
+
+    <string name="lbl_forgot_password">Forgot password?</string>
+    <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+
+    <!-- Errors -->
+    <string name="dialog_title_error">Error</string>
+    <string name="error_message_failed_sign_in_no_network">There was a problem with the network connection.\nAre you sure you\'re connected to the internet?</string>
+    <string name="log_error_invalid_provider">"Invalid provider: "</string>
+    <string name="log_error_failed_to_change_password">"Failed to change the password: "</string>
+    <string name="error_invalid_email_not_valid">%s is not a valid email</string>
+    <string name="error_message_email_issue">There was an error with your email; please check that you entered it correctly.</string>
+    <string name="error_you_didnt_give_permissions">You must give ShoppingList++ permission to access your Google account information if you want to use Google sign-in.</string>
+    <string name="error_email_taken">The email is already taken.</string>
+    <string name="error_invalid_password_not_valid">Please enter a password that is at least 6 characters long.</string>
+    <string name="error_cannot_be_empty">This cannot be empty.</string>
+</resources>
