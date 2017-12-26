@@ -73,7 +73,7 @@ public class RegistrationActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
         TextView loginText = (TextView)findViewById(R.id.registerLogInText);
         loginText.setOnClickListener(new View.OnClickListener(){
             @Override

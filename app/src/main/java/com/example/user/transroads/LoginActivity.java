@@ -118,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
        // Sign Up text for intent
         TextView signupText = (TextView)findViewById(R.id.signUp);
