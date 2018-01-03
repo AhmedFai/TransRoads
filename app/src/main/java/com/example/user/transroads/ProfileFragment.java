@@ -5,7 +5,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,11 +27,10 @@ public class ProfileFragment extends Fragment {
 
     private FirebaseAuth firebaseAuth;
 
-    public static ProfileFragment newInstance() {
-        ProfileFragment fragment = new ProfileFragment();
-        return fragment;
-        // Required empty public constructor
-    }
+    TabLayout tabLayout;
+    public static MyViewPager pager;
+    ProfilePager adapter;
+
 
 
     @Override
@@ -76,6 +79,48 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile,container,false);
+
+
+        tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
+        pager = (MyViewPager) view.findViewById(R.id.pager);
+        pager.setSwipeable(true);
+
+
+        tabLayout.addTab(tabLayout.newTab().setText("Favorite Spot"));
+        tabLayout.addTab(tabLayout.newTab().setText("My Reviews"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        adapter = new ProfilePager(getChildFragmentManager(), tabLayout.getTabCount());
+        pager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(pager);
+
+       tabLayout.getTabAt(0).setText("Favorite Spot");
+       tabLayout.getTabAt(1).setText("My Review");
+
+        return view;
+    }
+
+    public class ProfilePager extends FragmentStatePagerAdapter {
+        int tab;
+
+        public ProfilePager(FragmentManager fm, int List) {
+            super(fm);
+            this.tab = List;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            if (position == 0) {
+                return new FavoriteSpot();
+            } else if (position == 1) {
+                return new MyReview();
+            }
+            return null;
+        }
+
+        @Override
+        public int getCount() {
+            return 0;
+        }
     }
 }
