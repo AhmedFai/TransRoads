@@ -120,7 +120,7 @@ public class ProfileFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 0;
+            return 2;
         }
     }
 }

@@ -7,6 +7,13 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+        <item name="android:actionOverflowButtonStyle">@style/customOverFlow</item>
+    </style>
+
+    <style name="customOverFlow" parent="Widget.AppCompat.ActionButton.Overflow">
+
+        <item name="android:src">@drawable/overflow</item>
+
     </style>
 
     <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">

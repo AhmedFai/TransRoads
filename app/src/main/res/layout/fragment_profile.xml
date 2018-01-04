@@ -22,6 +22,17 @@
             />
 
         <TextView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_above="@+id/userName"
+            android:layout_alignEnd="@+id/profileImage"
+            android:background="@drawable/coloredcircle"
+            android:text="42"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:textColor="#ffffff" />
+
+        <TextView
             android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,31 +68,11 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="50dp">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CHECKINS"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="72"
-            android:textSize="30sp"
-            android:textColor="#000"/>
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <android.support.design.widget.TabLayout
@@ -96,7 +87,7 @@
         <com.example.user.transroads.MyViewPager
             android:id="@+id/pager"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"/>
 
