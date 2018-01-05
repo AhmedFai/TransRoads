@@ -22,7 +22,7 @@
             <ImageView
                 android:id="@+id/backImage"
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
+                android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/cardimage" />
 

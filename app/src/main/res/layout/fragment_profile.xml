@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,7 +6,33 @@
     android:orientation="vertical"
     tools:context="com.example.user.transroads.ProfileFragment">
 
-    <RelativeLayout
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:contentScrim="@color/colorPrimary"
+                app:titleEnabled="false"
+                android:fitsSystemWindows="true"
+                app:expandedTitleTextAppearance="@style/ExpandedAppBar"
+                app:collapsedTitleTextAppearance="@style/CollapsedAppBar"
+                app:expandedTitleGravity="center_horizontal|bottom"
+                app:expandedTitleMarginBottom="10dp"
+                app:collapsedTitleGravity="start|center_vertical"
+                app:toolbarId="@id/toolbar"
+                >
+
+
+        <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:orientation="vertical">
@@ -67,13 +93,17 @@
 
 
     </RelativeLayout>
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
 
 
     <LinearLayout
         android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout"
@@ -94,5 +124,5 @@
 
     </LinearLayout>
 
-
+    </android.support.design.widget.CoordinatorLayout>
 </LinearLayout>
