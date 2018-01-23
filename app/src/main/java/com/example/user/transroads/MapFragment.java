@@ -33,15 +33,10 @@ import java.util.Locale;
 import github.nisrulz.easydeviceinfo.base.EasyLocationMod;
 
 
-public class MapFragment extends Fragment  {
+public class MapFragment extends Fragment {
 
     private SupportMapFragment mSupportMapFragment;
 
-    public static MapFragment newInstance() {
-        MapFragment fragment = new MapFragment();
-        return fragment;
-        // Required empty public constructor
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,7 +50,7 @@ public class MapFragment extends Fragment  {
 
 
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_map, container,false);
+        View view = inflater.inflate(R.layout.fragment_map, container, false);
 
         mSupportMapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.mapFragment);
         if (mSupportMapFragment == null) {
@@ -92,9 +87,9 @@ public class MapFragment extends Fragment  {
 
                         LatLng myLocation = new LatLng(Double.parseDouble(lat), Double.parseDouble(lon));
                         Geocoder geocoder = new Geocoder(getContext(), Locale.getDefault());
-                        try{
-                            List<Address> listAdresses = geocoder.getFromLocation(Double.parseDouble(lat), Double.parseDouble(lon),1);
-                            if(null != listAdresses && listAdresses.size() > 0 ){
+                        try {
+                            List<Address> listAdresses = geocoder.getFromLocation(Double.parseDouble(lat), Double.parseDouble(lon), 1);
+                            if (null != listAdresses && listAdresses.size() > 0) {
                                 String address = listAdresses.get(0).getAddressLine(0);
                                 String state = listAdresses.get(0).getAdminArea();
                                 String country = listAdresses.get(0).getCountryName();
@@ -102,9 +97,9 @@ public class MapFragment extends Fragment  {
 
                                 googleMap.addMarker(new MarkerOptions()
                                         .position(new LatLng(Double.parseDouble(lat), Double.parseDouble(lon)))
-                                        .title(""+subLocality+", "+ state+", "+ country +""));
+                                        .title("" + subLocality + ", " + state + ", " + country + ""));
                             }
-                        } catch (IOException e){
+                        } catch (IOException e) {
                             e.printStackTrace();
                         }
 
@@ -114,7 +109,6 @@ public class MapFragment extends Fragment  {
                         googleMap.moveCamera(cameraUpdate);
 
 
-
                     }
 
                 }
@@ -122,9 +116,7 @@ public class MapFragment extends Fragment  {
             });
 
 
-
         }
-
 
 
         return view;

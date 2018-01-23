@@ -1,5 +1,6 @@
 package com.example.user.transroads;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -39,7 +40,13 @@ public class HomeFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_filter){
+        if (id == R.id.action_filter) {
+
+            final Dialog dialog = new Dialog(getContext());
+            dialog.setContentView(R.layout.home_filter_dialog);
+            dialog.setCancelable(true);
+            dialog.show();
+
             return true;
         }
 
@@ -51,17 +58,14 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home,container,false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         homeRecycler = (RecyclerView) view.findViewById(R.id.homeRecycler);
-        manager = new GridLayoutManager(getContext(),1);
+        manager = new GridLayoutManager(getContext(), 1);
         adapter = new homeCardAdapter(getContext());
         homeRecycler.setLayoutManager(manager);
         homeRecycler.setAdapter(adapter);
-
         image = (ImageView) view.findViewById(R.id.profileImage);
-
-
 
         return view;
     }

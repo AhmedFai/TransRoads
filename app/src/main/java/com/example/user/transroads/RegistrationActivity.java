@@ -30,6 +30,8 @@ import com.google.firebase.storage.UploadTask;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class RegistrationActivity extends AppCompatActivity {
     private static final String TAG = "EmailPassword";
     private EditText txtRegUserName;
@@ -39,7 +41,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private String mUserName, mUserEmail, mEmailPattern, mPassword, mCpassword;
     private ProgressDialog mProgressDialog;
-    private ImageButton mImageButton;
+    private CircleImageView mImageButton;
     private static  final int GALLERY_REQUEST=1;
     private DatabaseReference mDatabaseUsers;
     private StorageReference mStorage;
@@ -59,7 +61,7 @@ public class RegistrationActivity extends AppCompatActivity {
         txtRegEmailAddress = (EditText) findViewById(R.id.regEmailAddress);
         txtRegPassword = (EditText) findViewById(R.id.regPassword);
         txtRegCnfrmPass = (EditText) findViewById(R.id.reEnterPass);
-        mImageButton = (ImageButton) findViewById(R.id.imageButton);
+        mImageButton = (CircleImageView) findViewById(R.id.imageButton);
         mImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
