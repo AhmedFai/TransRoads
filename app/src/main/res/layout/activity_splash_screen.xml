@@ -19,5 +19,18 @@
         android:textSize="50dp"
         android:textStyle="bold" />
 
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:indeterminateOnly="true"
+        android:indeterminateTint="@color/colorPrimary"
+        android:layout_alignParentBottom="true"/>
+
 
 </RelativeLayout>
