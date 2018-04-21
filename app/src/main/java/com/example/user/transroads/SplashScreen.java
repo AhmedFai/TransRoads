@@ -1,5 +1,6 @@
 package com.example.user.transroads;
 
+import android.*;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Handler;
@@ -12,6 +13,8 @@ public class SplashScreen extends AppCompatActivity {
 
     private static int SPLASH_TIME_OUT = 5000;
     private TextView Title;
+    final private int REQUEST_CODE_ASK_PERMISSIONS = 123;
+    String[] PERMISSIONS = {android.Manifest.permission.ACCESS_COARSE_LOCATION, android.Manifest.permission.ACCESS_FINE_LOCATION};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
