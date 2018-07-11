@@ -15,9 +15,9 @@ import android.view.ViewGroup;
 public class FavoriteSpot extends Fragment {
 
 
-    RecyclerView favoriteRecycle;
-    ReviewCardAdapter adapter;
-    GridLayoutManager manager;
+        RecyclerView favoriteRecycle;
+        ReviewCardAdapter adapter;
+        GridLayoutManager manager;
 
 
 
