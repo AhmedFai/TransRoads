@@ -60,21 +60,27 @@ public class MainActivity extends AppCompatActivity {
 
 
         AHBottomNavigationItem item1 =
-                new AHBottomNavigationItem("Home", R.drawable.ic_home_black);
+                new AHBottomNavigationItem("", R.drawable.home);
 
-        AHBottomNavigationItem item2 =
-                new AHBottomNavigationItem("Map", R.drawable.map);
+        AHBottomNavigationItem item2 = new AHBottomNavigationItem("", R.drawable.search );
 
         AHBottomNavigationItem item3 =
-                new AHBottomNavigationItem("Profile", R.drawable.profile);
+                new AHBottomNavigationItem("", R.drawable.add);
+
+        AHBottomNavigationItem item4 = new AHBottomNavigationItem("", R.drawable.heart);
+
+        AHBottomNavigationItem item5 =
+                new AHBottomNavigationItem("", R.drawable.avatar);
 
 
         bottom.addItem(item1);
         bottom.addItem(item2);
         bottom.addItem(item3);
+        bottom.addItem(item4);
+        bottom.addItem(item5);
 
 
-        bottom.setTitleState(AHBottomNavigation.TitleState.ALWAYS_SHOW);
+        bottom.setTitleState(AHBottomNavigation.TitleState.ALWAYS_HIDE);
 
         bottom.setDefaultBackgroundColor(Color.parseColor("#ffffff"));
         bottom.setAccentColor(Color.parseColor("#336E9A"));
@@ -104,7 +110,28 @@ public class MainActivity extends AppCompatActivity {
 
                         return true;
 
+
+
                     case 1:
+
+                        FragmentTransaction ft1 = getSupportFragmentManager().beginTransaction();
+
+                        while (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+                            getSupportFragmentManager().popBackStackImmediate();
+                        }
+
+                        Search frag2 = new Search();
+                        ft1.replace(R.id.replace, frag2);
+                        ft1.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                        ft1.commit();
+
+                        toolbar.setTitle("Search");
+
+
+                        return true;
+
+
+                    case 2:
 
                         FragmentTransaction ft2 = getSupportFragmentManager().beginTransaction();
 
@@ -121,18 +148,40 @@ public class MainActivity extends AppCompatActivity {
 
                         return true;
 
-                    case 2:
 
-                        FragmentTransaction ft1 = getSupportFragmentManager().beginTransaction();
+
+
+                    case 3:
+
+                        FragmentTransaction ftn = getSupportFragmentManager().beginTransaction();
 
                         while (getSupportFragmentManager().getBackStackEntryCount() > 0) {
                             getSupportFragmentManager().popBackStackImmediate();
                         }
 
-                        ProfileFragment frag2 = new ProfileFragment();
-                        ft1.replace(R.id.replace, frag2);
-                        ft1.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
-                        ft1.commit();
+                        Notification fragn = new Notification();
+                        ftn.replace(R.id.replace, fragn);
+                        ftn.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                        ftn.commit();
+
+                        toolbar.setTitle("Notification");
+
+
+                        return true;
+
+
+                    case 4:
+
+                        FragmentTransaction ftp = getSupportFragmentManager().beginTransaction();
+
+                        while (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+                            getSupportFragmentManager().popBackStackImmediate();
+                        }
+
+                        ProfileFragment fragp = new ProfileFragment();
+                        ftp.replace(R.id.replace, fragp);
+                        ftp.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
+                        ftp.commit();
 
                         toolbar.setTitle("Profile");
 
