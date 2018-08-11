@@ -62,12 +62,14 @@ public class MainActivity extends AppCompatActivity {
         AHBottomNavigationItem item1 =
                 new AHBottomNavigationItem("", R.drawable.home);
 
-        AHBottomNavigationItem item2 = new AHBottomNavigationItem("", R.drawable.search );
+        AHBottomNavigationItem item2 =
+                new AHBottomNavigationItem("", R.drawable.search );
 
         AHBottomNavigationItem item3 =
                 new AHBottomNavigationItem("", R.drawable.add);
 
-        AHBottomNavigationItem item4 = new AHBottomNavigationItem("", R.drawable.heart);
+        AHBottomNavigationItem item4 =
+                new AHBottomNavigationItem("", R.drawable.heart);
 
         AHBottomNavigationItem item5 =
                 new AHBottomNavigationItem("", R.drawable.avatar);

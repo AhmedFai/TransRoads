@@ -112,12 +112,12 @@ public class MapFragment extends Fragment implements LocationListener, OnMapRead
                 Log.d("OnClick", "click to ho rha hai");
 
 
-                Intent in1 = new Intent(getContext(), AddNewPost.class);
-                //in1.putExtra("image", byteArray);
-                startActivity(in1);
+                /*Intent in1 = new Intent(getContext(), AddNewPost.class);
+                in1.putExtra("image", byteArray);
+                startActivity(in1);*/
 
 
-  /*              // Take screen shot
+                // Take screen shot
                 //bitmap = ScreenShott.getInstance().takeScreenShotOfView(hidden_txtview);
                 //bitmap = ScreenShott.getInstance().takeScreenShotOfJustView(hidden_txtview);
                 //bitmap = ScreenShott.getInstance().takeScreenShotOfTextureView(hidden_textureview);
@@ -154,7 +154,7 @@ public class MapFragment extends Fragment implements LocationListener, OnMapRead
                 };
                 map.snapshot(callback);
 
-*//*               map.snapshot(new GoogleMap.SnapshotReadyCallback() {
+/*               map.snapshot(new GoogleMap.SnapshotReadyCallback() {
                    @Override
                    public void onSnapshotReady(Bitmap bitmap) {
 
