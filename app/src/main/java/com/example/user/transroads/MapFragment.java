@@ -101,7 +101,6 @@ public class MapFragment extends Fragment implements LocationListener, OnMapRead
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_map, container, false);
-
         fab = (FloatingActionButton) view.findViewById(R.id.fab);
 
 
