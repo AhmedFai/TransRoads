@@ -63,6 +63,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
+import github.nisrulz.easydeviceinfo.base.EasyBatteryMod;
+import github.nisrulz.easydeviceinfo.base.EasyDeviceMod;
 import github.nisrulz.easydeviceinfo.base.EasyLocationMod;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
@@ -186,6 +188,8 @@ public class MapFragment extends Fragment implements LocationListener, OnMapRead
                         map.getUiSettings().setAllGesturesEnabled(true);
 
                         EasyLocationMod easyLocationMod = new EasyLocationMod(getContext());
+                        EasyDeviceMod easyDeviceMod = new EasyDeviceMod(getContext());
+                        EasyBatteryMod easyBatteryMod = new EasyBatteryMod(getContext());
 
                         if (ActivityCompat.checkSelfPermission(getContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                             // TODO: Consider calling
@@ -201,6 +205,13 @@ public class MapFragment extends Fragment implements LocationListener, OnMapRead
                         double[] l = easyLocationMod.getLatLong();
                         currentlat = String.valueOf(l[0]);
                         currentLng = String.valueOf(l[1]);
+
+                        String imei = easyDeviceMod.getIMEI();
+
+                        String device = easyDeviceMod.getPhoneNo();
+
+                        Log.d("IMEI", imei);
+                        Log.d("DEVICE",device);
 
                         LatLng myLocation = new LatLng(Double.parseDouble(currentlat), Double.parseDouble(currentLng));
                         Geocoder geocoder = new Geocoder(getContext(), Locale.getDefault());
